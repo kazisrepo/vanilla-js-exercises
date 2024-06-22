@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Kazi Islam; 301163646 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Timers</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Timers</h1>
+    </header>
+    <section>
+      <h1>Timer</h1>
+      <div id="timerClock">
+        <input
+          id="minutesBox"
+          type="number"
+          value="1"
+          min="0"
+          max="10"
+          step="1"
+        />
+        <span id="separator">:</span>
+        <input
+          id="secondsBox"
+          type="number"
+          value="30"
+          min="0"
+          max="59"
+          step="1"
+        />
+        <span id="separator2">:</span>
+        <input
+          id="millisecondsBox"
+          type="number"
+          value="1000"
+          min="0"
+          max="999"
+          step="1"
+        />
+        <br />
+        <span id="minLabel">minutes</span>
+        <span id="secLabel">seconds</span>
+        <span id="millisecLabel">milliseconds</span>
+        <input id="runPauseButton" type="button" value="RUN / PAUSE" />
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

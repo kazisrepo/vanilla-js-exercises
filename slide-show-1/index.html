@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Image Viewer</title>
+  </head>
+  <body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container" id="container">
+      
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+
+    <hr />
+
+    <div style="margin: 0 auto; text-align: center" id="favoritesDiv">
+      <h2>Favorite</h2>
+      <div class="favItemDiv" id="favItemDiv" style="display: flex">
+        
+      </div>
+    </div>
+
+    <!-- Bigger image-->
+
+    <div class="bigImageContainer" id="bigImageContainer">
+      <div class="biggerImageDiv">
+        <img class="biggerImage" id="biggerview" src="#" />
+        <button
+          class="favorite btnClose"
+          id="btnClose"
+          onclick="closeBiggerImage()"
+        >
+          Close</button
+        ><button class="favorite btnAdd" id="addToFavorite">
+          Add to favorite
+        </button>
+        <button class="favorite btnRemove" id="removeFromFavorite">
+          Remove from favorite
+        </button>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <div style="margin: 0 auto; width: 170px;padding-top: 50px;">Developed by: Kazi Islam</div>
+  </body>
+</html>

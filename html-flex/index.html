@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=100vw, initial-scale=1.0" />
+    <title>Flex tutorial</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*border: 2px solid goldenrod;*/
+        font-family: Roboto;
+      }
+
+      body {
+        background-color: black;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      .container {
+        margin: auto 10%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+
+      a {
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        color: #efe7eb;
+      }
+
+      .default-margin {
+        margin-bottom: 10px;
+      }
+
+      .default-padding {
+        padding: 100px;
+      }
+
+      .section {
+        width: 100%;
+      }
+
+      .header,
+      .footer {
+        background-color: #1f2937;
+      }
+
+      .header-top,
+      .header-hero {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header-top {
+        align-items: center;
+      }
+
+      .header-top > div > ul li {
+        display: inline;
+        list-style-type: none;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .header-hero {
+        align-items: top;
+        margin-top: 80px;
+        flex: 1;
+
+        color: #f9faf8;
+      }
+
+      .header-hero .hero-left {
+        margin-right: 40px;
+      }
+
+      .header-hero .hero-right img {
+        width: 400px;
+        height: auto;
+      }
+
+      .header-hero h1 {
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .sign-up-button {
+        border-radius: 10px;
+        color: white;
+        background-color: #3882f6;
+        padding: 10px 50px;
+        border: 0px;
+      }
+
+      .random-info,
+      .call-to-action-section {
+        background-color: whitesmoke;
+      }
+
+      .random-header {
+        font-size: 36px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .random-box-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .random-box img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #dcdcdc;
+        border-radius: 4px;
+      }
+
+      .random-box-area p {
+        text-align: center;
+        padding: 5px;
+        flex-wrap: wrap;
+        width: 200px;
+      }
+
+      .comment-section {
+        background-color: #e5e7eb;
+      }
+
+      .comment-section p {
+        font-size: 36px;
+        color: #1f2937;
+        font-style: italic;
+        padding: 0 50px;
+        margin: 50px 0;
+      }
+
+      .call-to-action-section .content {
+        border-radius: 8px;
+        background-color: #3882f6;
+        display: flex;
+        padding: 50px;
+        justify-content: space-between;
+        align-items: end;
+        color: white;
+      }
+
+      .call-to-action-section button {
+        border-radius: 8px;
+        border: 2px solid white;
+      }
+
+      .footer {
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="section">
+        <div class="header default-padding">
+          <div class="header-top">
+            <div><img src="./images/logo-2.png" alt="logo" class="logo" /></div>
+            <div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About us</a></li>
+                <li><a href="index.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-hero">
+            <div class="hero-left">
+              <h1 class="default-margin">This website is <br />awesome!</h1>
+              <p class="default-margin">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ullamcorper malesuada proin libero nunc consequat interdum
+                varius. Et odio pellentesque diam volutpat.
+              </p>
+              <button class="default-margin sign-up-button">Sign up</button>
+            </div>
+            <div class="hero-right">
+              <img src="./images/crescent-image.jpg" alt="Place for image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="random-info default-padding">
+          <p class="random-header">Some random information.</p>
+          <div class="random-box-area">
+            <div>
+              <div class="random-box">
+                <img style="object-fit: cover" src="./images/sunflower.jpeg" />
+              </div>
+              <p>this is a subtext under an illustration or image</p>
+            </div>
+            <div>
+              <div class="random-box">
+                <img style="object-fit: cover" src="./images/lily.jpeg" />
+              </div>
+              <p>this is a subtext under an illustration or image</p>
+            </div>
+            <div>
+              <div class="random-box">
+                <img style="object-fit: cover" src="./images/beans.jpeg" />
+              </div>
+              <p>this is a subtext under an illustration or image</p>
+            </div>
+            <div>
+              <div class="random-box">
+                <img style="object-fit: cover" src="./images/rose.jpeg" />
+              </div>
+              <p>this is a subtext under an illustration or image</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="comment-section default-padding">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ullamcorper malesuada proin.
+          </p>
+          <p class="author">- Mr. Webby</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="call-to-action-section default-padding">
+          <div class="content">
+            <div>
+              <h2>Call to action. Its time!</h2>
+              <p>This is the time to take action. Click to sign up now.</p>
+            </div>
+            <div>
+              <button class="default-margin sign-up-button">Sign up now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="footer default-padding"></div>
+      </div>
+    </div>
+  </body>
+</html>

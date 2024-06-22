@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a sketch</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="assets/pad.png" />
+  </head>
+  <body>
+    <div class="header">
+      <div></div>
+      <div class="middle">
+        <img src="assets/note-pad.png" alt="logo" class="logo" />
+        <h1>Etch a sketch</h1>
+      </div>
+      <div></div>
+    </div>
+    <hr class="thick" />
+    <div id="container" class="container">
+      <div class="left-panel">
+        <fieldset>
+          <legend>Grid length</legend>
+          <div class="grid-length">
+            <div class="btn-grid-length">
+              <button type="button" id="btnGridLength">Enter</button>
+            </div>
+            <div class="input-range-slider">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="0"
+                id="inputRangeSlider"
+              />
+            </div>
+            <div class="grid-length-value text-right-align">
+              <label id="lblGridLength">0</label>
+              <span class=""> x </span>
+              <label id="lblGridLengthRepeat">0</label>
+            </div>
+          </div>
+          <hr class="thin" />
+          <div class="create-grid-buttons">
+            <div>
+              <button id="btnCreateGrid" class="create-grid-button">
+                Create grid
+              </button>
+            </div>
+            <div>
+              <button id="btnClearGrid" class="clear-grid-button">
+                Clear grid
+              </button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="mt-10">
+          <legend>Drawing color</legend>
+          <div class="mt-5 mb-5">
+            <input
+              type="radio"
+              id="rdoSingleColor"
+              name="colorSelection"
+              class="single-color"
+              checked
+            />
+            <label for="rdoSingleColor">Single color</label>
+            <input type="color" id="colorCode" value="#d3d3d3" class="ml-10" />
+          </div>
+          <div class="mt-5 mb-5">
+            <input
+              type="radio"
+              id="rdoMultiColor"
+              name="colorSelection"
+              class="multi-color"
+            />
+            <label for="rdoMultiColor">Multi color (random)</label>
+          </div>
+          <hr class="thin" />
+        </fieldset>
+        <fieldset class="mt-10">
+          <legend>Mouse event</legend>
+          <div class="mt-5 mb-5">
+            <input
+              type="radio"
+              id="rdoMouseOver"
+              name="mouseEvent"
+              class=""
+              checked
+            />
+            <label for="rdoMouseOver">Mouse over</label>
+          </div>
+          <div class="mt-5 mb-5">
+            <input type="radio" id="rdoMouseDown" name="mouseEvent" class="" />
+            <label for="rdoMouseDown">Mouse down and move</label>
+          </div>
+          <hr class="thin" />
+        </fieldset>
+      </div>
+      <div class="right-panel">
+        <div id="gridContainer" class="grid-container"></div>
+      </div>
+    </div>
+    <div class="footer" style="padding: 20px; align-items: center">
+      <h4>There is no copyright :)</h4>
+      <h5>Developed by Kazi</h5>
+    </div>
+  </body>
+</html>

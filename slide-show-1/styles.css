@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* biiger image window */
+.favorite {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 40px 10px 40px;
+  cursor: pointer;
+  color: #fff;
+  float: right;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.btnAdd {
+  background-color: rgb(17 152 255);
+  margin-right: 8px;
+}
+.btnRemove {
+  background-color: rgb(195, 0, 0);
+  margin-right: 8px;
+}
+.btnClose {
+  background-color: rgb(124, 124, 124);
+  margin-right: 3px;
+}
+
+.bigImageContainer {
+  text-align: center;
+  margin-top: -80px;
+}
+.biggerImage {
+  width: 900px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.imageFile {
+  width: 100%;
+  cursor: pointer;
+}
+
+.favItemDiv {
+  width: 1047px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  height: 130px;
+}
+
+.favImgDiv img {
+  width: 187px;
+  height: 94px;
+}
+
+.favImgDiv{
+  border: 1px solid rgb(189, 189, 189);
+  padding: 2px;
+  width:195px;
+  height: 100px;
+  margin: 5px;
+}
+
+.bigImageContainer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+}

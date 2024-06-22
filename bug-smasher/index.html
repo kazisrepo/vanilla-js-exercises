@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Smasher Game</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="assets/pad.png" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <div class="header mb-20">
+      <div class="middle">
+        <img src="assets/note-pad.png" alt="logo" class="logo" />
+        <h1>Bug Smasher Game</h1>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <p>
+        <strong>Instructions:</strong> Click on the bug to score points. The
+        game starts with a 2-second timer. Every time you hit the bug, the timer
+        speeds up. How high can you score? :)
+      </p>
+      <hr />
+      <div class="canvas-top">
+        <div style="flex-grow: 1">
+          <span style="font-size: 2rem; margin-right: 5px">SCORE: </span
+          ><label class="score-label" id="scoreLabel">0</label>
+        </div>
+        <div class="reset-buttons-div">
+          <button id="resetSpeed" class="reset-speed">RESET SPEED</button>
+          <button id="resetScore" class="reset-score">RESET SCORE</button>
+        </div>
+      </div>
+
+      <div class="main-canvas" id="gameCanvas"></div>
+    </div>
+    <div class="footer" style="padding: 20px; align-items: center">
+      <h5>Developed by Kazi Islam</h5>
+    </div>
+  </body>
+</html>
